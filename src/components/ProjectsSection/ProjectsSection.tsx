@@ -54,10 +54,7 @@ const projects: Project[] = [
       "Full-stack recruitment platform supporting job postings, candidate applications, shortlisting, hiring pipelines, and interviews. Built on Clean Architecture with CQRS/MediatR, Repository/Unit-of-Work, Keycloak RBAC across HR, Admin, and Candidate portals, and QuestPDF for automated document generation.",
     stack: ["ASP.NET Core Web API", "Angular", "PostgreSQL", "EF Core", "Keycloak", "QuestPDF"],
     featured: true,
-    links: [
-      { label: "GitHub", href: "https://github.com/InfinityAbir/Recruitment-Management-System" },
-      { label: "Live Demo", href: "https://sylviang-frontend.onrender.com/" },
-    ],
+    links: [{ label: "Live Demo", href: "https://sylviang-frontend.onrender.com/" }],
   },
   {
     id: "2",
