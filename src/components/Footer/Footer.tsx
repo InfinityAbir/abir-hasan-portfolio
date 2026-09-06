@@ -52,7 +52,7 @@ export const Footer = () => {
                 Abir Hasan
               </span>
               <span className="text-[10px] font-bold text-muted-foreground tracking-widest uppercase mt-0.5">
-                Software Engineering Intern · Millennium Information Solution
+                Software Engineer · Millennium Information Solution
               </span>
             </div>
           </div>

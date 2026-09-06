@@ -24,8 +24,9 @@ export const AboutSection = () => {
               Building with <span className="text-gradient-primary">Clean Architecture</span> & Solidity
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a Computer Science & Engineering student at IUBAT with a 3.72/4.00 CGPA, currently
-              interning at Millennium Information Solution. I build production-grade systems end to end —
+              I'm a Computer Science & Engineering student at IUBAT with a 3.72/4.00 CGPA, having
+              completed my internship at Millennium Information Solution. I build production-grade
+              systems end to end —
               enterprise recruitment platforms on Clean Architecture and CQRS, AI-powered search engines,
               and blockchain applications with Solidity smart contracts. Comfortable across the stack:
               backend architecture, API design, and shipping features from concept to deployment.

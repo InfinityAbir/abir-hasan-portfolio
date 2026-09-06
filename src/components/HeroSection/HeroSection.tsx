@@ -74,7 +74,7 @@ export const HeroSection = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             Software Engineering Intern at Millennium Information Solution. I build production-grade
-            systems with ASP.NET Core, Angular, and Solidity — from an enterprise recruitment platform
+            systems with ASP.NET Core, Angular, and Solidity — from enterprise recruitment platforms
             on Clean Architecture and CQRS to AI-powered search and blockchain applications.
           </motion.p>
 

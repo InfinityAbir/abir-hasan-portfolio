@@ -104,7 +104,8 @@ export const ContactSection = () => {
                 Let's build something <span className="text-gradient-primary">production-grade</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-md mx-auto">
-                Currently interning at Millennium Information Solution while finishing my BCSE at IUBAT.
+                Recently completed my software engineering internship at Millennium Information
+                Solution while finishing my BCSE at IUBAT.
                 Looking for a full-time Software Engineer role — backend, full-stack, or blockchain —
                 to keep shipping production-grade systems. Let's talk.
               </p>
