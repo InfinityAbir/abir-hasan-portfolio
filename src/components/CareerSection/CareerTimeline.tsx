@@ -6,7 +6,7 @@ const experience = [
     year: "2026",
     role: "Software Engineering Intern",
     place: "MILLENNIUM INFORMATION SOLUTION LTD. · JUN – SEP 2026",
-    current: true,
+    current: false,
     icon: <Briefcase className="w-4 h-4" />,
     description: "Completed a full-stack Recruitment Management System (ASP.NET Core Web API + Angular) built on Clean Architecture, CQRS with MediatR, and the Repository/Unit-of-Work pattern, working across candidate applications, shortlisting, hiring pipelines, and interview management.",
     details: [
