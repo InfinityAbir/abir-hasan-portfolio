@@ -48,8 +48,21 @@ const projects: Project[] = [
   },
   {
     id: "1",
+    title: "Recruitment Management System — Internship Project",
+    tagline: "PROJECT_02 · INTERNSHIP",
+    description:
+      "Full-stack recruitment platform supporting job postings, candidate applications, shortlisting, hiring pipelines, and interviews. Built on Clean Architecture with CQRS/MediatR, Repository/Unit-of-Work, Keycloak RBAC across HR, Admin, and Candidate portals, and QuestPDF for automated document generation.",
+    stack: ["ASP.NET Core Web API", "Angular", "PostgreSQL", "EF Core", "Keycloak", "QuestPDF"],
+    featured: true,
+    links: [
+      { label: "GitHub", href: "https://github.com/InfinityAbir/Recruitment-Management-System" },
+      { label: "Live Demo", href: "https://sylviang-frontend.onrender.com/" },
+    ],
+  },
+  {
+    id: "2",
     title: "TeleMed — Telemedicine Consultation & Booking",
-    tagline: "PROJECT_02",
+    tagline: "PROJECT_03",
     description:
       "Web-based telemedicine platform with Admin, Doctor & Patient dashboards. Appointment booking, secure online payments, digital receipts, and prescription downloads with ASP.NET Core Identity role-based auth.",
     stack: ["ASP.NET Core MVC", "C#", "SQL Server", "Entity Framework", "Bootstrap"],
@@ -60,9 +73,9 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "2",
+    id: "3",
     title: "Omnichannel — Unified Customer Inbox SaaS",
-    tagline: "PROJECT_03",
+    tagline: "PROJECT_04",
     description:
       "One inbox for every customer conversation — WhatsApp, Instagram, Messenger, and website chat merged into a single thread, paired with an AI assistant that answers on approved business knowledge and hands off to a human the moment a conversation needs one.",
     stack: ["ASP.NET Core (.NET 10)", "Angular", "EF Core", "PostgreSQL"],
@@ -73,18 +86,18 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "3",
+    id: "4",
     title: "Secure Integration & Secrets Management Platform",
-    tagline: "PROJECT_04",
+    tagline: "PROJECT_05",
     description:
       "Reusable .NET module for wiring external services into any app through an admin UI — zero hard-coded credentials. AES-256-GCM envelope encryption with key rotation, SSRF-safe outbound requests, and an audit trail scrubbed of secret values.",
     stack: ["ASP.NET Core (.NET 10)", "C#", "AES-256-GCM", "SQLite"],
     links: [{ label: "GitHub", href: "https://github.com/InfinityAbir/Secure-Integration-Secrets-Management-Platform" }],
   },
   {
-    id: "4",
+    id: "5",
     title: "StoryForge — AI Narrative Engine",
-    tagline: "PROJECT_05",
+    tagline: "PROJECT_06",
     description:
       "Extracts a story's narrative DNA — genre, themes, tone, archetypes, conflict, emotional arc — then generates an entirely new, independent story from that foundation. Stateless architecture with rate limiting and safety guardrails; supports English and Bangla.",
     stack: ["Angular 21", "ASP.NET Core (.NET 10)", "Groq API"],
@@ -94,18 +107,18 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "5",
+    id: "6",
     title: "Personal AI Search Engine",
-    tagline: "PROJECT_06",
+    tagline: "PROJECT_07",
     description:
       "Self-hosted knowledge base that indexes personal documents, webpages, and bookmarks with keyword, semantic, and hybrid search. Local ONNX embeddings feed a PostgreSQL + pgvector store, and a pluggable AI assistant answers with source citations.",
     stack: ["ASP.NET Core (.NET 10)", "Angular 21", "PostgreSQL + pgvector", "ONNX"],
     links: [{ label: "GitHub", href: "https://github.com/InfinityAbir/Personal-AI-Search-Engine" }],
   },
   {
-    id: "6",
+    id: "7",
     title: "Blood Network Bangladesh",
-    tagline: "PROJECT_07",
+    tagline: "PROJECT_08",
     description:
       "Real-time blood donor matching platform — web (Angular) and Android (Kotlin) clients on a shared ASP.NET Core backend. Matches emergency requests to compatible, nearby, verified donors with SignalR/FCM alerts and a privacy-first design.",
     stack: ["ASP.NET Core (.NET 10)", "Angular 21", "Kotlin", "PostgreSQL", "SignalR"],
@@ -115,9 +128,9 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "7",
+    id: "8",
     title: "Ma Medicine Store — Pharmacy Management",
-    tagline: "PROJECT_08",
+    tagline: "PROJECT_09",
     description:
       "Full-stack online pharmacy system with Admin, Pharmacist & Customer roles behind secure authentication. Real-time inventory and order tracking across the full purchase-to-fulfillment flow, plus low-stock alerts.",
     stack: ["Python", "Django", "SQLite", "Bootstrap"],
@@ -127,18 +140,18 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "8",
+    id: "9",
     title: "AI Loan Prediction System",
-    tagline: "PROJECT_09",
+    tagline: "PROJECT_10",
     description:
       "Expert system for loan approval prediction combining rule-based reasoning, Bayesian inference, and machine learning. Feature-engineered preprocessing pipelines feed a Flask interface for real-time predictions.",
     stack: ["Python", "Flask", "Pandas", "Scikit-learn"],
     links: [{ label: "GitHub", href: "https://github.com/InfinityAbir/Ai-Loan-Prediction-System" }],
   },
   {
-    id: "9",
+    id: "10",
     title: "Intelligent Document Processing System",
-    tagline: "PROJECT_10",
+    tagline: "PROJECT_11",
     description:
       "AI-ready pipeline that converts PDF, DOCX, XLSX and more into structured Markdown optimized for LLM usage — with token-reduction and cost-saving analytics, replacing manual document review.",
     stack: ["JavaScript", "OCR", "AI Pipelines"],
@@ -148,18 +161,18 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "10",
+    id: "11",
     title: "Aduri AI Agent",
-    tagline: "PROJECT_11",
+    tagline: "PROJECT_12",
     description:
       "Bilingual (Bangla & English) AI assistant with text and voice interaction, chat history, and a clean ChatGPT-like interface — automates task execution via LLM API integrations.",
     stack: ["JavaScript", "Node.js", "LLM APIs"],
     links: [{ label: "GitHub", href: "https://github.com/InfinityAbir/Aduri-AI-Agent" }],
   },
   {
-    id: "11",
+    id: "12",
     title: "Ma Mamata Variety Store — POS System",
-    tagline: "PROJECT_12",
+    tagline: "PROJECT_13",
     description:
       "Point-of-sale system for small retail stores. Manages daily transactions, product categories, and customer data, with automated invoice generation and sales tracking for non-technical staff.",
     stack: ["C#", ".NET", "SQL Server", "Crystal Reports"],
@@ -184,7 +197,7 @@ export const ProjectsSection = () => {
           Selected <span className="text-gradient-primary">Work</span>
         </h2>
         <p className="text-muted-foreground text-center md:text-left max-w-2xl text-lg">
-          Twelve shipped projects — from enterprise recruitment platforms and AI search engines to
+          Thirteen shipped projects — from enterprise recruitment platforms and AI search engines to
           blockchain pensions and real-time donor networks.
         </p>
       </motion.div>

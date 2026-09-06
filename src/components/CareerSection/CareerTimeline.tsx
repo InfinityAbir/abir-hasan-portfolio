@@ -8,10 +8,10 @@ const experience = [
     place: "MILLENNIUM INFORMATION SOLUTION LTD. · JUN – SEP 2026",
     current: true,
     icon: <Briefcase className="w-4 h-4" />,
-    description: "Contributing to a full-stack Recruitment Management System (ASP.NET Core Web API + Angular) built on Clean Architecture, CQRS with MediatR, and the Repository/Unit-of-Work pattern.",
+    description: "Completed a full-stack Recruitment Management System (ASP.NET Core Web API + Angular) built on Clean Architecture, CQRS with MediatR, and the Repository/Unit-of-Work pattern, working across candidate applications, shortlisting, hiring pipelines, and interview management.",
     details: [
-      "Implemented Keycloak-based authentication and role-based access control (RBAC) across HR, Admin, and Candidate portals; built RESTful APIs consumed by Angular components.",
-      "Worked with PostgreSQL and EF Core for schema design and migrations, used QuestPDF for automated document generation, and collaborated in Agile, Git-based code reviews.",
+      "Implemented Keycloak-based authentication and role-based access control (RBAC) across HR, Admin, and Candidate portals, and built RESTful APIs consumed by Angular front-end components.",
+      "Worked with PostgreSQL and Entity Framework Core for schema design and migrations, used QuestPDF for automated document generation, and collaborated with senior developers through code review and Agile, Git-based delivery.",
     ],
   },
   {

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Rocket, GraduationCap, Cpu, CalendarRange } from "lucide-react";
 
 const stats = [
-  { icon: <Rocket className="w-6 h-6" />, label: "Projects Shipped", value: "12" },
+  { icon: <Rocket className="w-6 h-6" />, label: "Projects Shipped", value: "13" },
   { icon: <GraduationCap className="w-6 h-6" />, label: "CGPA", value: "3.72" },
   { icon: <Cpu className="w-6 h-6" />, label: "Tech Stack", value: "16" },
   { icon: <CalendarRange className="w-6 h-6" />, label: "Years Building", value: "3" },
