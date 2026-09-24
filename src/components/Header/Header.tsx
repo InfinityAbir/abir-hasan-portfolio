@@ -64,6 +64,7 @@ export default function Header() {
   };
 
   return (
+    <>
     <AnimatePresence>
       {showHeader && (
         <motion.header
@@ -71,9 +72,9 @@ export default function Header() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -100, opacity: 0, transition: { duration: 0.4 } }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4"
+          className="fixed top-3 sm:top-6 left-0 right-0 z-50 flex justify-center px-3 sm:px-4"
         >
-          <div className="glass-panel w-full max-w-7xl rounded-[2rem] flex items-center justify-between px-6 py-4 shadow-xl">
+          <div className="glass-panel w-full max-w-7xl rounded-[2rem] flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 shadow-xl">
             {/* Logo */}
             <a
               onClick={() => handleScrollTo("#hero")}
@@ -122,14 +123,18 @@ export default function Header() {
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="md:hidden text-foreground hover:text-primary transition-colors p-2"
+                aria-label="Open menu"
+                className="md:hidden text-foreground hover:text-primary transition-colors p-2 -mr-1"
               >
                 <Menu size={24} />
               </button>
             </div>
           </div>
+        </motion.header>
+      )}
+    </AnimatePresence>
 
-          {/* Mobile Sidebar */}
+          {/* Mobile Sidebar - rendered outside the transformed header so fixed inset-0 covers the viewport */}
           <AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div
@@ -139,11 +144,12 @@ export default function Header() {
                   exit: "closed",
                   variants: menuVariants,
                 } as MotionProps)}
-                className="fixed inset-0 z-40 bg-background/95 backdrop-blur-2xl md:hidden flex flex-col items-center justify-center"
+                className="fixed inset-0 z-[60] bg-background/95 backdrop-blur-2xl md:hidden flex flex-col items-center justify-center px-6 text-center"
               >
                 <motion.button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="absolute top-8 right-8 text-foreground"
+                  aria-label="Close menu"
+                  className="absolute top-6 right-6 text-foreground p-2"
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0, opacity: 0 }}
@@ -154,13 +160,13 @@ export default function Header() {
 
                 <motion.ul
                   {...({ variants: listVariants } as MotionProps)}
-                  className="flex flex-col items-center justify-center h-full space-y-10"
+                  className="flex flex-col items-center justify-center h-full space-y-6 sm:space-y-10"
                 >
                   {navItems.map((item) => (
                     <motion.li key={item.name} {...({ variants: itemVariants } as MotionProps)}>
                       <a
                         onClick={() => handleScrollTo(item.href)}
-                        className="text-4xl font-bold text-muted-foreground hover:text-primary hover:tracking-wider transition-all cursor-pointer"
+                        className="text-3xl sm:text-4xl font-bold text-muted-foreground hover:text-primary hover:tracking-wider transition-all cursor-pointer"
                       >
                         {item.name}
                       </a>
@@ -170,9 +176,7 @@ export default function Header() {
               </motion.div>
             )}
           </AnimatePresence>
-        </motion.header>
-      )}
-    </AnimatePresence>
+    </>
   );
 }
 

@@ -31,7 +31,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="w-full relative z-10 pt-16 pb-28 md:pb-36 bg-card/60 backdrop-blur-2xl border-t border-black/5 dark:border-white/10 shadow-2xl rounded-t-[3rem] overflow-hidden">
+    <footer className="w-full relative z-10 pt-16 pb-10 md:pb-36 bg-card/60 backdrop-blur-2xl border-t border-black/5 dark:border-white/10 shadow-2xl rounded-t-[2rem] sm:rounded-t-[3rem] overflow-hidden">
       {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
@@ -78,7 +78,7 @@ export const Footer = () => {
             texts={morphingTexts}
             morphTime={1.6}
             cooldownTime={0.8}
-            className="text-3xl md:text-5xl lg:text-6xl text-foreground font-extrabold min-h-[70px] text-center"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-foreground font-extrabold min-h-[56px] sm:min-h-[70px] text-center max-w-full overflow-hidden"
           />
         </div>
 

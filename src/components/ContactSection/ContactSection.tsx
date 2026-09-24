@@ -37,13 +37,13 @@ const contactItems = [
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="max-w-7xl mx-auto px-6 py-24">
+    <section id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 w-full scroll-mt-24">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.8 }}
-        className="glass-panel p-8 md:p-12 rounded-[3rem] border border-foreground/10 relative overflow-hidden"
+        className="glass-panel p-5 sm:p-8 md:p-12 rounded-[2rem] sm:rounded-[3rem] border border-foreground/10 relative overflow-hidden"
       >
         {/* Background Gradients */}
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/20 blur-[100px] rounded-full pointer-events-none" />
@@ -54,7 +54,7 @@ export const ContactSection = () => {
           {/* Contact Info */}
           <div className="flex-1 space-y-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 break-words">
                 Let's <span className="text-gradient-primary">Connect</span>
               </h2>
               <p className="text-muted-foreground">
@@ -93,14 +93,14 @@ export const ContactSection = () => {
 
           {/* CTA Card */}
           <div className="flex-1 relative">
-            <div className="glass-panel p-8 md:p-10 rounded-[2rem] border border-foreground/10 h-full flex flex-col justify-center text-center relative overflow-hidden">
+            <div className="glass-panel p-6 sm:p-8 md:p-10 rounded-[1.5rem] sm:rounded-[2rem] border border-foreground/10 h-full flex flex-col justify-center text-center relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60" />
 
               <span className="mx-auto px-4 py-1.5 rounded-full text-[11px] font-bold tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 mb-6 w-max">
                 ● OPEN TO OPPORTUNITIES
               </span>
 
-              <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-4 break-words">
                 Let's build something <span className="text-gradient-primary">production-grade</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-md mx-auto">

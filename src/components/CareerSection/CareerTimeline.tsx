@@ -28,7 +28,7 @@ const experience = [
 
 export const CareerTimeline = () => {
   return (
-    <section id="career" className="max-w-5xl mx-auto px-6 py-24">
+    <section id="career" className="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24 w-full scroll-mt-24">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -56,13 +56,13 @@ export const CareerTimeline = () => {
           >
             {/* Timeline Dot */}
             <span
-              className={`absolute -left-[43px] md:-left-[51px] top-7 w-3.5 h-3.5 rounded-full border-2 border-background shadow-[0_0_10px_rgba(34,211,238,0.6)] ${
+              className={`absolute -left-[38px] sm:-left-[43px] md:-left-[51px] top-7 w-3.5 h-3.5 rounded-full border-2 border-background shadow-[0_0_10px_rgba(34,211,238,0.6)] ${
                 exp.current ? "bg-emerald-500 shadow-[0_0_10px_rgba(52,211,153,0.7)]" : "bg-cyan-400"
               }`}
             />
 
             <div
-              className={`glass-panel rounded-[2rem] border p-8 transition-all duration-300 hover:translate-x-1 ${
+              className={`glass-panel rounded-[1.5rem] sm:rounded-[2rem] border p-5 sm:p-8 transition-all duration-300 hover:translate-x-1 min-w-0 ${
                 exp.current
                   ? "border-emerald-500/25 hover:border-emerald-500/40"
                   : "border-foreground/10 hover:border-cyan-400/40"
@@ -82,9 +82,9 @@ export const CareerTimeline = () => {
                 )}
               </div>
 
-              <p className="text-xs font-mono tracking-wider text-muted-foreground mb-4">{exp.place}</p>
+              <p className="text-xs font-mono tracking-wider text-muted-foreground mb-4 break-words">{exp.place}</p>
 
-              <p className="text-foreground/90 leading-relaxed mb-3">{exp.description}</p>
+              <p className="text-foreground/90 leading-relaxed mb-3 text-sm sm:text-base break-words">{exp.description}</p>
 
               {exp.details.length > 0 && (
                 <ul className="space-y-2.5">

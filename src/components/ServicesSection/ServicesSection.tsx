@@ -36,7 +36,7 @@ const skillGroups = [
 
 export const ServicesSection = () => {
   return (
-    <section id="skills" className="max-w-7xl mx-auto px-6 py-24">
+    <section id="skills" className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 w-full scroll-mt-24">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

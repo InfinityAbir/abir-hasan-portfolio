@@ -10,12 +10,12 @@ import avatar from "../../assets/avatar.png";
 
 export const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-[100vh] flex flex-col pt-12 md:pt-16 overflow-hidden bg-background">
+    <section id="hero" className="relative min-h-[100vh] flex flex-col pt-[112px] sm:pt-[120px] md:pt-[136px] overflow-hidden bg-background scroll-mt-24">
       {/* Background Dot Pattern with Radial Vignette Shade */}
       <DotPattern width={16} height={16} cx={1} cy={1} cr={1} glow />
       
       {/* Main Content Area */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 pb-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex-1 flex flex-col md:flex-row items-center justify-center gap-10 sm:gap-12 md:gap-20 pb-12 overflow-x-clip">
         
         {/* Left Content */}
         <motion.div 
@@ -28,14 +28,14 @@ export const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="mb-6"
+            className="mb-6 w-full min-w-0 flex justify-center md:justify-start px-2 sm:px-0"
           >
-            <Badge variant="outline" size="lg" className="gap-2.5 py-1.5 px-4 glass-panel border-foreground/10">
-              <span className="relative flex h-2 w-2">
+            <Badge variant="outline" size="lg" className="gap-2.5 py-1.5 px-4 glass-panel border-foreground/10 max-w-full justify-center text-center whitespace-normal leading-snug">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
-              <span className="text-xs font-medium text-muted-foreground">Open to Opportunities · Full-Stack Engineer</span>
+              <span className="text-[11px] sm:text-xs font-medium text-muted-foreground whitespace-normal text-center break-words min-w-0">Open to Opportunities · Full-Stack Engineer</span>
             </Badge>
           </motion.div>
 
@@ -45,30 +45,30 @@ export const HeroSection = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="mb-4 text-center md:text-left"
           >
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-2">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-2">
               Hi, I'm
             </h1>
             
             {/* Light Theme: Clean Vibrant Gradient Text */}
             <div className="block dark:hidden">
-              <span className="bg-gradient-to-r from-violet-600 via-sky-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent font-extrabold text-[clamp(3rem,6.5vw,5.5rem)] leading-none tracking-tight block pb-2 select-none">
+              <span className="bg-gradient-to-r from-violet-600 via-sky-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent font-extrabold text-[clamp(2.4rem,10vw,5.5rem)] leading-[1.05] tracking-tight block pb-2 select-none break-words">
                 ABIR HASAN
               </span>
             </div>
 
             {/* Dark Theme: Rich Lightswind Aurora Text Effect */}
-            <div className="hidden dark:block">
+            <div className="hidden dark:block w-full">
               <AuroraTextEffect
                 text="ABIR HASAN"
-                fontSize="clamp(3rem, 6.5vw, 5.5rem)"
-                className="bg-transparent overflow-visible p-0 justify-start"
-                textClassName="bg-gradient-to-r from-cyan-400 via-purple-400 to-sky-300 bg-clip-text text-transparent pb-2 font-extrabold"
+                fontSize="clamp(2.4rem, 10vw, 5.5rem)"
+                className="bg-transparent overflow-visible p-0 justify-center md:justify-start"
+                textClassName="bg-gradient-to-r from-cyan-400 via-purple-400 to-sky-300 bg-clip-text text-transparent pb-2 font-extrabold break-words"
               />
             </div>
           </motion.div>
 
           <motion.p 
-            className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed w-full"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed w-full px-1 sm:px-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -79,18 +79,18 @@ export const HeroSection = () => {
           </motion.p>
 
           <motion.div 
-            className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-10 w-full md:w-auto"
+            className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center md:justify-start gap-3 sm:gap-4 mb-10 w-full md:w-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <a href="#projects" className="inline-block">
-              <Button size="lg" className="rounded-full px-7 h-12 bg-primary text-primary-foreground font-semibold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:-translate-y-1">
+            <a href="#projects" className="inline-block w-full sm:w-auto">
+              <Button size="lg" className="rounded-full px-7 h-12 w-full sm:w-auto bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:-translate-y-1">
                 View Work <ArrowRight className="w-4 h-4" />
               </Button>
             </a>
-            <a href="https://github.com/InfinityAbir" target="_blank" rel="noreferrer" className="inline-block">
-              <Button size="lg" variant="outline" className="rounded-full px-7 h-12 glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10">
+            <a href="https://github.com/InfinityAbir" target="_blank" rel="noreferrer" className="inline-block w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="rounded-full px-7 h-12 w-full sm:w-auto glass-panel text-foreground font-semibold flex items-center justify-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10">
                 GitHub <ArrowRight className="w-4 h-4 rotate-45" />
               </Button>
             </a>
@@ -117,7 +117,7 @@ export const HeroSection = () => {
 
         {/* Right Content - Visual Hanging ID Card */}
         <motion.div 
-          className="flex-1 w-full max-w-md relative flex justify-center items-center py-2"
+          className="flex-1 w-full max-w-full sm:max-w-md min-w-0 relative flex justify-center items-center py-2 overflow-x-clip"
           initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -129,7 +129,7 @@ export const HeroSection = () => {
             accentColor="#22d3ee"
             ropeLength={75}
             ropeColor="#27272a"
-            cardWidth="w-72 sm:w-80 md:w-84"
+            cardWidth="w-full max-w-[280px] sm:max-w-80"
           >
             <div className="flex flex-col h-full bg-card w-full">
               {/* Card Header Banner with Avatar */}

@@ -62,7 +62,7 @@ function App() {
       <ReactLenis root options={{ smoothWheel: true, duration: 1.2 }}>
         <Header />
 
-        <main className="w-full flex flex-col pt-10 border-none">
+        <main className="w-full flex flex-col border-none">
           <HeroSection />
           <AboutSection />
           <ServicesSection />

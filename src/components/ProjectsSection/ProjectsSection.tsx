@@ -182,7 +182,7 @@ const projects: Project[] = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="w-full max-w-7xl mx-auto px-6 py-24">
+    <section id="projects" className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 scroll-mt-24">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -207,7 +207,7 @@ export const ProjectsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: (i % 3) * 0.1, duration: 0.6 }}
             viewport={{ once: true, amount: 0.1 }}
-            className={`group relative flex flex-col rounded-[2rem] border p-7 bg-card/80 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden ${
+            className={`group relative flex flex-col rounded-[1.5rem] sm:rounded-[2rem] border p-5 sm:p-7 bg-card/80 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden min-w-0 ${
               project.featured
                 ? "border-indigo-500/30 shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:border-indigo-400/50 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_0_30px_rgba(79,70,229,0.15)]"
                 : "border-border/70 hover:border-cyan-400/40 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_30px_rgba(34,211,238,0.08)]"
@@ -235,11 +235,11 @@ export const ProjectsSection = () => {
               </span>
             )}
 
-            <span className="text-[11px] font-mono tracking-widest text-muted-foreground uppercase mb-3">
+            <span className="text-[11px] font-mono tracking-widest text-muted-foreground uppercase mb-3 pr-16 break-words">
               {project.tagline}
             </span>
 
-            <h3 className="text-xl font-extrabold text-foreground tracking-tight mb-3 leading-snug">
+            <h3 className="text-lg sm:text-xl font-extrabold text-foreground tracking-tight mb-3 leading-snug break-words">
               {project.title}
             </h3>
 
@@ -258,7 +258,7 @@ export const ProjectsSection = () => {
               ))}
             </div>
 
-            <div className="flex items-center gap-5 mt-auto">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-3 mt-auto">
               {project.links.map((link) => (
                 <a
                   key={link.label}

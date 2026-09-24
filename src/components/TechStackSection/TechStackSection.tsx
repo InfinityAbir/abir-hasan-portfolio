@@ -28,8 +28,8 @@ const TechStackSection = () => {
         className="w-full overflow-hidden relative flex items-center"
       >
         {/* Gradients to fade edges */}
-        <div className="absolute left-0 w-32 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 w-32 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 w-12 sm:w-32 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 w-12 sm:w-32 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
         
         {/* Marquee Animation */}
         <div className="flex w-max animate-[marquee_35s_linear_infinite] whitespace-nowrap items-center hover:[animation-play-state:paused] py-1">

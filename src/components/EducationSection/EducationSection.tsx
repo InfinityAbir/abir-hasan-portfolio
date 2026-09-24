@@ -47,7 +47,7 @@ export const EducationSection = () => {
   ];
 
   return (
-    <section id="education" className="max-w-7xl mx-auto px-6 py-24">
+    <section id="education" className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 w-full scroll-mt-24">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -55,11 +55,11 @@ export const EducationSection = () => {
         viewport={{ once: true }}
         className="mb-12"
       >
-        <div className="flex items-center gap-4 mb-3">
-          <div className="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/25 flex items-center justify-center text-primary shadow-md">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-3">
+          <div className="w-12 h-12 shrink-0 rounded-2xl bg-primary/10 border border-primary/25 flex items-center justify-center text-primary shadow-md">
             <GraduationCap className="w-6 h-6" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight break-words">
             Academic <span className="text-gradient-primary">Background</span>
           </h2>
         </div>
@@ -81,7 +81,7 @@ export const EducationSection = () => {
               viewport={{ once: true }}
             >
               <MagicCard
-                className="h-full p-8 rounded-[2.25rem] border border-border/80 bg-card/80 shadow-xl"
+                className="h-full p-5 sm:p-8 rounded-[1.75rem] sm:rounded-[2.25rem] border border-border/80 bg-card/80 shadow-xl"
                 gradientSize={300}
                 gradientColor="rgba(34, 211, 238, 0.10)"
                 gradientFrom="#22d3ee"
@@ -101,7 +101,7 @@ export const EducationSection = () => {
                     </div>
 
                     {/* Degree Title & Institution Meta */}
-                    <h3 className="text-2xl font-extrabold text-foreground tracking-tight mb-2">
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight mb-2 break-words">
                       {edu.degree}
                     </h3>
 

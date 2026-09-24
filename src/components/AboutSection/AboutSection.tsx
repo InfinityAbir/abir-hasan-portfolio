@@ -10,7 +10,7 @@ const stats = [
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="max-w-7xl mx-auto px-6 py-24">
+    <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 w-full scroll-mt-24">
       <motion.div
         className="flex flex-col md:flex-row gap-16 items-center"
         initial={{ opacity: 0, y: 50 }}
@@ -34,11 +34,11 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        <div className="flex-1 grid grid-cols-2 gap-4 w-full">
+        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full min-w-0">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
-              className="glass-panel p-6 rounded-2xl border border-foreground/10 hover:border-primary/50 transition-colors group relative overflow-hidden"
+              className="glass-panel p-5 sm:p-6 rounded-2xl border border-foreground/10 hover:border-primary/50 transition-colors group relative overflow-hidden min-w-0"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
