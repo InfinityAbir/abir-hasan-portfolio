@@ -149,14 +149,14 @@ export const HeroSection = () => {
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:12px_12px] pointer-events-none" />
 
                 {/* Profile Photo with Dual Glowing Ring */}
-                <div className="mt-1 relative w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-cyan-400 via-primary to-purple-400 backdrop-blur-md shadow-2xl border border-white/50 overflow-hidden group">
+                <div className="mt-1 relative w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-cyan-400 via-primary to-purple-400 backdrop-blur-md shadow-2xl border border-white/50 group">
                   <img 
                     src={avatar}
                     alt="Abir Hasan" 
                     className="w-full h-full object-cover rounded-full filter contrast-105"
                     loading="eager"
                   />
-                  <div className="absolute bottom-1 right-2 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white shadow-md" />
+                  <div className="absolute bottom-0.5 right-0.5 w-2 h-2 rounded-full bg-emerald-500 border-2 border-white shadow-md" />
                 </div>
               </div>
 
