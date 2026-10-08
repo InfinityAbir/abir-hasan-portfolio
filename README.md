@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my work as a full-stack engineer specializing in ASP.NET Core, Angular, Solidity, and AI-powered systems.
 
-**Live:** [abir-hasan-portfolio](https://infinityabir.github.io/abir-hasan-portfolio/)
+[![Portfolio Website](https://img.shields.io/badge/Portfolio%20Website-View%20Live-2ea44f?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=24292e)](https://infinityabir.github.io/abir-hasan-portfolio/)
 
 ## Tech Stack
 
