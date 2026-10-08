@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, X, FileText, Globe, FlaskConical, FolderKanban } from "lucide-react";
+import { ArrowUpRight, X, FileText, Globe, Github, FlaskConical, FolderKanban } from "lucide-react";
 import {
   featuredPublication,
   manuscriptPublications,
@@ -66,6 +66,24 @@ function GlowOverlay({ tone }: { tone: "emerald" | "cyan" }) {
         e.currentTarget.style.setProperty("--my", `${((e.clientY - r.top) / r.height) * 100}%`);
       }}
     />
+  );
+}
+
+function SourceCodeLink({ pub, className = "" }: { pub: Publication; className?: string }) {
+  if (!pub.sourceCodeUrl) return null;
+  return (
+    <a
+      href={pub.sourceCodeUrl}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`View source code for ${pub.title} on GitHub (opens in new tab)`}
+      title="Source-code repository for the research prototype (no live deployment)"
+      className={`inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider uppercase text-cyan-400 hover:text-cyan-300 hover:gap-2.5 transition-all duration-200 ${className}`}
+    >
+      <Github className="w-3.5 h-3.5" aria-hidden="true" />
+      View Source Code
+      <ArrowUpRight className="w-3 h-3" aria-hidden="true" />
+    </a>
   );
 }
 
@@ -176,8 +194,9 @@ function ManuscriptCard({ pub, index, onDetails }: { pub: Publication; index: nu
       <div className="mb-5">
         <AreaTags areas={pub.researchAreas.slice(0, 4)} />
       </div>
-      <div className="mt-auto">
+      <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3">
         <DetailsButton onClick={() => onDetails(pub)} label="View Details" />
+        <SourceCodeLink pub={pub} />
       </div>
     </motion.article>
   );
@@ -312,6 +331,17 @@ function PublicationDialog({ pub, onClose }: { pub: Publication; onClose: () => 
                     {[pub.date, pub.location].filter(Boolean).join(" · ")}
                   </>
                 ) : null}
+              </dd>
+            </div>
+          )}
+          {pub.sourceCodeUrl && (
+            <div>
+              <dt className="text-[10px] font-mono font-bold tracking-[0.18em] uppercase text-primary/90 mb-1.5">Implementation</dt>
+              <dd className="text-sm text-muted-foreground leading-relaxed mb-2">
+                Accompanying blockchain-based airline ticketing prototype — source code only, no live deployment.
+              </dd>
+              <dd>
+                <SourceCodeLink pub={pub} />
               </dd>
             </div>
           )}

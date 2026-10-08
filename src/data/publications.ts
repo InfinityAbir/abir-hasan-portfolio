@@ -23,6 +23,8 @@ export interface Publication {
   location?: string;
   date?: string;
   links?: PublicationLink[];
+  /** Public source-code repository for the accompanying research prototype. No liveDemoUrl — no live deployment exists. */
+  sourceCodeUrl?: string;
   relatedProjectId?: string;
   relatedProjectTitle?: string;
   detail?: {
@@ -171,7 +173,8 @@ export const publications: Publication[] = [
       "Ticketing spans payments, reservations, airline databases, and customer service — when these systems disagree, travelers face failed issuance, slow refunds, and unclear ownership records.",
     summary:
       "A framework combining Ethereum contracts, NFT tickets, IPFS with on-chain hashes, decentralized identity, and ERC-2981 royalties across issuance, transfer, cancellation, refund, and resale — 110 contract tests passing with no high- or medium-severity static-analysis findings.",
-    researchAreas: ["Blockchain", "Ethereum", "Smart Contracts", "IPFS", "Distributed Systems"],
+    researchAreas: ["Blockchain", "Smart Contracts", "NFT Ticketing", "IPFS", "Decentralized Identity", "Secure Ticket Resale"],
+    sourceCodeUrl: "https://github.com/InfinityAbir/Airlines-Ticketing-System",
     detail: {
       question:
         "Can an NFT-based ticket lifecycle with on-chain hashes and decentralized identity make issuance, ownership, and refunds auditable without trusting a single intermediary?",
