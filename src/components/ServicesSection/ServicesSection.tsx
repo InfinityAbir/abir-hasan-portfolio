@@ -48,8 +48,8 @@ export const ServicesSection = () => {
           Technical Skills
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-          A deliberate toolbox spanning languages, frameworks, databases, and architecture —
-          tuned for shipping production-grade full-stack and blockchain systems.
+          The tools I reach for when a problem calls for them — each one earned its place
+          by solving something real in the projects above.
         </p>
       </motion.div>
 

@@ -55,10 +55,10 @@ export const ContactSection = () => {
           <div className="flex-1 space-y-8">
             <div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 break-words">
-                Let's <span className="text-gradient-primary">Connect</span>
+                Have a <span className="text-gradient-primary">problem worth solving?</span>
               </h2>
               <p className="text-muted-foreground">
-                Reach out for collaborations, opportunities, or just a conversation about backend,
+                Reach out for collaborations, opportunities, or a conversation about backend,
                 full-stack, or blockchain engineering.
               </p>
             </div>

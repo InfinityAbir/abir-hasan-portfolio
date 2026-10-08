@@ -21,15 +21,19 @@ export const AboutSection = () => {
         <div className="flex-1 space-y-8">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-              Building with <span className="text-gradient-primary">Clean Architecture</span> & Solidity
+              Engineer first, <span className="text-gradient-primary">problem-solver always</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a Computer Science & Engineering student at IUBAT with a 3.72/4.00 CGPA, having
-              completed my internship at Millennium Information Solution. I build production-grade
-              systems end to end —
-              enterprise recruitment platforms on Clean Architecture and CQRS, AI-powered search engines,
-              and blockchain applications with Solidity smart contracts. Comfortable across the stack:
-              backend architecture, API design, and shipping features from concept to deployment.
+              I'm Abir Hasan, a Computer Science & Engineering student at IUBAT (CGPA 3.72/4.00)
+              who completed a software engineering internship at Millennium Information Solution.
+              I build practical systems across web, mobile, healthcare, recruitment, and developer
+              tooling — and I'm drawn to problems in system design, workflow automation, and data
+              management.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              Alongside shipping software, I research blockchain-based public-sector systems —
+              my undergraduate thesis prototypes pension infrastructure on Ethereum and asks
+              whether it is technically feasible and economically practical.
             </p>
           </div>
         </div>

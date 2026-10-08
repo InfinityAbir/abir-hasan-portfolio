@@ -68,14 +68,25 @@ export const HeroSection = () => {
           </motion.div>
 
           <motion.p 
-            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed w-full px-1 sm:px-0"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl mb-4 leading-relaxed w-full px-1 sm:px-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Software Engineering Intern at Millennium Information Solution. I build production-grade
+            <strong className="text-foreground font-semibold">I build software that solves real-world problems</strong> —
+            practical web, mobile, and AI-powered systems, engineered around the problem first
+            and the stack second.
+          </motion.p>
+
+          <motion.p
+            className="text-sm sm:text-base text-muted-foreground max-w-xl mb-8 leading-relaxed w-full px-1 sm:px-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.55, duration: 0.8 }}
+          >
+            Software Engineering Intern at Millennium Information Solution. I ship production-grade
             systems with ASP.NET Core, Angular, and Solidity — from enterprise recruitment platforms
-            on Clean Architecture and CQRS to AI-powered search and blockchain applications.
+            to blockchain research — while exploring scalable architecture and applied research.
           </motion.p>
 
           <motion.div 
