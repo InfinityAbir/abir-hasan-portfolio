@@ -115,12 +115,8 @@ function FeaturedPublicationCard({ onDetails }: { onDetails: (p: Publication) =>
     >
       <GlowOverlay tone="emerald" />
 
-      <div className="absolute top-5 right-5 z-10">
-        <StatusBadge status={p.status} />
-      </div>
-
-      <span className="text-[11px] font-mono tracking-widest text-muted-foreground uppercase mb-3 pr-28 break-words">
-        Featured publication · {p.statusLine}
+      <span className="text-[11px] font-mono tracking-widest text-muted-foreground uppercase mb-3 break-words">
+        Featured publication
       </span>
 
       <h3 id={`pub-title-${p.id}`} className="text-lg sm:text-2xl font-extrabold text-foreground tracking-tight mb-3 leading-snug break-words max-w-3xl">
@@ -131,7 +127,7 @@ function FeaturedPublicationCard({ onDetails }: { onDetails: (p: Publication) =>
         {p.venue} · {p.date} · {p.location}
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-5">
         <div>
           <p className="text-[10px] font-mono font-bold tracking-[0.18em] uppercase text-primary/90 mb-1.5">
             Research problem
@@ -144,6 +140,10 @@ function FeaturedPublicationCard({ onDetails }: { onDetails: (p: Publication) =>
           </p>
           <p className="text-sm text-foreground/90 leading-relaxed">{p.summary}</p>
         </div>
+      </div>
+
+      <div className="mb-5">
+        <StatusBadge status={p.status} />
       </div>
 
       <AreaTags areas={p.researchAreas} />
@@ -180,9 +180,6 @@ function ManuscriptCard({ pub, index, onDetails }: { pub: Publication; index: nu
       className="group relative flex flex-col rounded-[1.5rem] border p-5 sm:p-6 bg-card/80 transition-all duration-300 hover:-translate-y-1 overflow-hidden min-w-0 border-border/70 hover:border-cyan-400/40 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_30px_rgba(34,211,238,0.08)]"
     >
       <GlowOverlay tone="cyan" />
-      <div className="mb-3">
-        <StatusBadge status={pub.status} />
-      </div>
       <h3 id={`pub-title-${pub.id}`} className="text-base sm:text-lg font-extrabold text-foreground tracking-tight mb-2 leading-snug break-words">
         {pub.title}
       </h3>
@@ -190,7 +187,10 @@ function ManuscriptCard({ pub, index, onDetails }: { pub: Publication; index: nu
         <p className="text-xs font-mono text-muted-foreground mb-2">Abir Hasan</p>
       )}
       <p className="text-sm text-muted-foreground leading-relaxed mb-3">{pub.problem}</p>
-      <p className="text-sm text-foreground/85 leading-relaxed mb-4 flex-1">{pub.summary}</p>
+      <p className="text-sm text-foreground/85 leading-relaxed mb-3">{pub.summary}</p>
+      <div className="mb-4">
+        <StatusBadge status={pub.status} />
+      </div>
       <div className="mb-5">
         <AreaTags areas={pub.researchAreas.slice(0, 4)} />
       </div>
@@ -264,10 +264,11 @@ function PublicationDialog({ pub, onClose }: { pub: Publication; onClose: () => 
         <h3 id={`pub-detail-${pub.id}`} className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight mt-2 mb-2 pr-10 break-words">
           {pub.title}
         </h3>
-        <p className="text-xs sm:text-sm font-mono text-muted-foreground mb-6">
-          {pub.statusLine}
-          {pub.author ? ` · ${pub.author}` : ""}
-        </p>
+        {pub.author && (
+          <p className="text-xs sm:text-sm font-mono text-muted-foreground mb-6">
+            {pub.author}
+          </p>
+        )}
 
         <dl className="space-y-5">
           <div>

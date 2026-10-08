@@ -37,7 +37,7 @@ export interface Publication {
 
 export const STATUS_META: Record<PublicationStatus, { label: string; badge: string }> = {
   accepted: {
-    label: "Accepted",
+    label: "Accepted — IEEE CSDE 2026",
     badge: "text-emerald-300 bg-emerald-500/10 border-emerald-500/30",
   },
   "under-review": {
