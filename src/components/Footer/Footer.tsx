@@ -19,6 +19,7 @@ export const Footer = () => {
     { name: "Home", href: "#hero" },
     { name: "Skills", href: "#skills" },
     { name: "Work", href: "#projects" },
+    { name: "Research", href: "#research" },
     { name: "Experience", href: "#career" },
     { name: "Education", href: "#education" },
     { name: "Contact", href: "#contact" },

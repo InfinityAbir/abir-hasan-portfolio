@@ -6,12 +6,13 @@ import { AboutSection } from "./components/AboutSection/AboutSection";
 import { EngineeringApproach } from "./components/EngineeringApproach/EngineeringApproach";
 import { ServicesSection } from "./components/ServicesSection/ServicesSection";
 import { ProjectsSection } from "./components/ProjectsSection/ProjectsSection";
+import { ResearchSection } from "./components/ResearchSection/ResearchSection";
 import { EducationSection } from "./components/EducationSection/EducationSection";
 import { CareerTimeline } from "./components/CareerSection/CareerTimeline";
 import { ContactSection } from "./components/ContactSection/ContactSection";
 import { Footer } from "./components/Footer/Footer";
 import ReactLenis from "lenis/react";
-import { Home, User, GraduationCap, Briefcase, FolderKanban, Send, Wrench } from "lucide-react";
+import { Home, User, GraduationCap, Briefcase, FolderKanban, Send, Wrench, FlaskConical } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Dock from "./components/lightswind/dock";
@@ -52,6 +53,7 @@ function App() {
     { icon: <User size={20} />, label: "About", onClick: () => scrollToSection("about") },
     { icon: <Wrench size={20} />, label: "Skills", onClick: () => scrollToSection("skills") },
     { icon: <FolderKanban size={20} />, label: "Work", onClick: () => scrollToSection("projects") },
+    { icon: <FlaskConical size={20} />, label: "Research", onClick: () => scrollToSection("research") },
     { icon: <Briefcase size={20} />, label: "Experience", onClick: () => scrollToSection("career") },
     { icon: <GraduationCap size={20} />, label: "Education", onClick: () => scrollToSection("education") },
     { icon: <Send size={20} />, label: "Contact", onClick: () => scrollToSection("contact") },
@@ -69,6 +71,7 @@ function App() {
           <EngineeringApproach />
           <ServicesSection />
           <ProjectsSection />
+          <ResearchSection />
           <CareerTimeline />
           <EducationSection />
           <ContactSection />

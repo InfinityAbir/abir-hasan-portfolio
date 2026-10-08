@@ -1,7 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Globe, ArrowUpRight, X, FileText } from "lucide-react";
+import { Github, Globe, ArrowUpRight, X, FileText, FlaskConical } from "lucide-react";
 import { featuredProjects, moreProjects, type Project } from "../../data/projects";
+import {
+  OPEN_PROJECT_EVENT,
+  requestOpenPublication,
+  scrollToSectionId,
+} from "../ResearchSection/ResearchSection";
 
 type ChipVariant = "python" | "csharp" | "js" | "kotlin" | "default";
 
@@ -215,6 +220,16 @@ function ProjectDetailDialog({ project, onClose }: { project: Project; onClose: 
     };
   }, [onClose]);
 
+  const openRelatedResearch = () => {
+    if (!project.relatedResearch) return;
+    const id = project.relatedResearch.id;
+    onClose();
+    window.setTimeout(() => {
+      scrollToSectionId("research");
+      window.setTimeout(() => requestOpenPublication(id), 500);
+    }, 60);
+  };
+
   const allTech = project.detail?.extraTechnologies
     ? [...project.technologies, ...project.detail.extraTechnologies]
     : project.technologies;
@@ -320,6 +335,29 @@ function ProjectDetailDialog({ project, onClose }: { project: Project; onClose: 
         <div className="mt-7 pt-5 border-t border-border/60">
           <ProjectLinks project={project} />
         </div>
+
+        {project.relatedResearch && (
+          <div className="mt-5 rounded-xl border border-emerald-500/25 bg-emerald-500/[0.06] px-4 py-3.5">
+            <p className="text-[10px] font-mono font-bold tracking-[0.18em] uppercase text-emerald-400/90 mb-1.5">
+              Related research
+            </p>
+            <p className="text-sm text-foreground/90 leading-relaxed mb-1 break-words">
+              {project.relatedResearch.title}
+            </p>
+            <p className="text-xs font-mono text-muted-foreground mb-2.5">
+              {project.relatedResearch.statusLine}
+            </p>
+            <button
+              type="button"
+              onClick={openRelatedResearch}
+              className="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider uppercase text-emerald-400 hover:text-emerald-300 hover:gap-2.5 transition-all duration-200 cursor-pointer"
+            >
+              <FlaskConical className="w-3.5 h-3.5" aria-hidden="true" />
+              View Research
+              <ArrowUpRight className="w-3 h-3" aria-hidden="true" />
+            </button>
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );
@@ -329,6 +367,17 @@ export const ProjectsSection = () => {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const openDetails = useCallback((p: Project) => setActiveProject(p), []);
   const closeDetails = useCallback(() => setActiveProject(null), []);
+
+  useEffect(() => {
+    const all = [...featuredProjects, ...moreProjects];
+    const handler = (e: Event) => {
+      const id = (e as CustomEvent<string>).detail;
+      const found = all.find((p) => p.id === id);
+      if (found) setActiveProject(found);
+    };
+    window.addEventListener(OPEN_PROJECT_EVENT, handler);
+    return () => window.removeEventListener(OPEN_PROJECT_EVENT, handler);
+  }, []);
 
   return (
     <section id="projects" className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 scroll-mt-24">

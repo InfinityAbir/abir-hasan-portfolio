@@ -35,6 +35,12 @@ export interface Project {
     extraTechnologies?: string[];
   };
   links: ProjectLink[];
+  /** Optional link from a project prototype to the research it produced. */
+  relatedResearch?: {
+    id: string;
+    title: string;
+    statusLine: string;
+  };
 }
 
 export const projects: Project[] = [
@@ -68,6 +74,12 @@ export const projects: Project[] = [
       extraTechnologies: ["Ethereum", "ethers.js"],
     },
     links: [{ label: "GitHub", href: "https://github.com/InfinityAbir/Blockchain-Pension-System" }],
+    relatedResearch: {
+      id: "pension-prototype",
+      title:
+        "An Ethereum and IPFS Prototype for Bangladesh's Universal Pension Scheme: Design, Cost Analysis, and Feasibility Limits",
+      statusLine: "Accepted — IEEE CSDE 2026",
+    },
   },
   {
     id: "recruitment-platform",
