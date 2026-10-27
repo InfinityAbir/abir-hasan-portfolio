@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Tracker — Privacy Policy</title>
+<style>body{font-family:sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.7;color:#222}h1{font-size:24px}h2{font-size:18px;margin-top:28px}.muted{color:#666}</style>
+</head>
+<body>
+<h1>Job Tracker — Privacy Policy</h1>
+<p class="muted">Effective date: October 27, 2026</p>
+<p>Job Tracker ("we", "our", "the app") helps you keep track of job applications and interviews. It is an <strong>offline-first</strong> app: your job data lives on your device. This policy explains what the app stores, what leaves your device, and who receives it.</p>
+
+<h2>1. What we collect</h2>
+<p>We (the developer) do not collect your personal data. There is no sign-in, no account, no advertising, no analytics, and no developer-run database. We cannot see your applications.</p>
+
+<h2>2. Data stored on your device</h2>
+<p>The app stores the information you type in, only on your device: company names, job titles, dates, statuses, salary notes, recruiter name/email/phone, referral source, interview details, notes, drafts, and your language setting. It also keeps a local backup copy of this data in the app's private storage so it can be restored if the database is ever empty.</p>
+<p>If Android Auto Backup is enabled on your device, Android may back this data up to your own Google account and restore it when you change phones. That is handled by Google under your Google account settings. Your optional AI key (see below) is excluded from backups.</p>
+<p>You can delete any application inside the app, and uninstalling the app removes its data from your device.</p>
+
+<h2>3. Optional AI tools (the only data that leaves your device)</h2>
+<p>The AI tools (job posting parser, cover letter writer, follow-up email drafter) are optional and run <strong>only when you tap the button</strong> to use them. When you do, the app sends the text you entered in that tool, and, when used on an existing application, that application's company name, job title, status and notes, so that a response can be generated. Recruiter contact details and your other applications are not sent.</p>
+<ul>
+<li><strong>Default (no key):</strong> the request goes over HTTPS to a small relay service we run on Cloudflare, which forwards it to the Google Gemini API and returns the answer. The relay does not store or log the content of your requests. For abuse prevention it uses a random identifier generated on your device (not linked to you) and your IP address, which Cloudflare processes transiently to apply rate limits.</li>
+<li><strong>Your own key (optional):</strong> if you add your own free Google Gemini API key, requests go directly from your device to Google, using your key. The key is stored encrypted on your device with the Android Keystore and is never sent to us. You can remove it at any time in the AI sheet.</li>
+</ul>
+<p>Google processes the text under the Gemini API terms. On the free tier, Google may use submitted content to improve its products, and it may be reviewed by humans. <strong>Please do not enter sensitive personal data</strong> (such as government ID numbers, financial details, or health information) into the AI tools.</p>
+
+<h2>4. Permissions</h2>
+<ul>
+<li><strong>Internet:</strong> only for the optional AI tools.</li>
+<li><strong>Notifications:</strong> to show interview reminders you set.</li>
+<li><strong>Alarms / exact alarms:</strong> to deliver interview reminders at the time you choose.</li>
+<li><strong>Receive boot completed:</strong> to restore your reminders after the device restarts.</li>
+<li><strong>Vibrate:</strong> for reminder notifications.</li>
+</ul>
+<p>Reminders are scheduled locally by Android; no reminder data leaves your device.</p>
+
+<h2>5. Sharing</h2>
+<p>We do not sell or share your data. The only third parties involved are Google (Gemini API, when you use the AI tools) and Cloudflare (hosting of the relay service for requests made without your own key).</p>
+
+<h2>6. Exports</h2>
+<p>If you export or share your applications (CSV, JSON, or text summary), the file or text goes to the app or location you choose. We do not receive it.</p>
+
+<h2>7. Security</h2>
+<p>Network requests use HTTPS. Your optional API key is encrypted with the Android Keystore. Data on your device is protected by Android's app sandbox and your device lock.</p>
+
+<h2>8. Children</h2>
+<p>Job Tracker is intended for adults seeking employment and is not directed to children under 18. We do not knowingly collect data from children.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, the updated version will be posted at this same address with a new effective date.</p>
+
+<h2>10. Contact</h2>
+<p>Email: abirha3896@gmail.com</p>
+</body>
+</html>
