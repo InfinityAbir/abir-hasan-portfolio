@@ -8,21 +8,54 @@
 </head>
 <body>
 <h1>NoorUp: Islamic Lifestyle — Privacy Policy</h1>
-<p class="muted">Effective date: October 8, 2026</p>
-<p>NoorUp ("we", "our") is an <strong>offline-first</strong> Islamic lifestyle app. This policy explains how we handle information.</p>
-<h2>1. Data we do NOT collect</h2>
-<p>We do not collect, transmit, sell, or share any personal data. There is no sign-in, no advertising SDK, no analytics, and no Firebase in the app.</p>
-<h2>2. Location (optional, on-device only)</h2>
-<p>If you enable GPS for accurate prayer times, your coordinates are stored only on your device (app preferences) and used only for local prayer-time calculation. They are never sent to us or any third party. The city name shown may use Android's on-device Geocoder.</p>
-<h2>3. Notifications and widgets</h2>
-<p>Prayer reminders and the home-screen widget work entirely through local Android system alarms and notifications. No data leaves your device.</p>
-<h2>4. Optional AI companion</h2>
-<p>The AI assistant works offline with built-in answers by default. It contacts a server only if you personally add your own Gemini API key — in that case your question text is sent to Google's Gemini API under Google's terms.</p>
-<h2>5. Children</h2>
-<p>The app contains no user accounts, chat with strangers, or purchases, and collects no data from anyone, including children.</p>
-<h2>6. Changes</h2>
-<p>If this policy changes, the updated version will be posted at this same address.</p>
-<h2>7. Contact</h2>
+<p class="muted">Effective date: October 28, 2026</p>
+<p>NoorUp ("we", "our", "the app") is an <strong>offline-first</strong> Islamic lifestyle app. Prayer times, the Quran, Duas, Hadith, Qibla, Tasbih and the Zakat calculator work on your device. The only feature that sends data off your device is the <strong>AI Islamic Assistant</strong>, described in section 3. This policy explains what the app stores, what leaves your device, and who receives it.</p>
+
+<h2>1. What we collect</h2>
+<p>We (the developer) do not collect your personal data. There is no sign-in or account, no advertising, no analytics, no Firebase, and no developer-run database. We cannot see your prayer records, settings or location.</p>
+
+<h2>2. Data stored on your device</h2>
+<p>Your settings, language, prayer completion and Qada records, Tasbih counts, bookmarks and your selected location are stored only on your device, in the app's private storage. The app does not use Android cloud backup for this data. Uninstalling the app removes it.</p>
+<p><strong>Location (optional):</strong> if you allow location access for accurate prayer times, your coordinates are stored on your device and used for local prayer-time calculation. They are not sent to us. To show a city name the app may use Android's built-in Geocoder, which, depending on your device, can contact a location service provided by your device maker or Google to turn coordinates into a place name. You can choose a city manually instead.</p>
+
+<h2>3. AI Islamic Assistant (the only data that leaves your device)</h2>
+<p>When you are online and ask a question in the Assistant tab, the app sends the following over HTTPS so an answer can be written:</p>
+<ul>
+<li>the question you typed;</li>
+<li>the language you use (Bengali or English);</li>
+<li>up to the last 8 messages of the current conversation, for context;</li>
+<li>when your question matches a built-in topic, a short reference note from the app's own built-in answer (for example, Quran or Hadith references for wudu);</li>
+<li>a random identifier generated on your device when you first use the app. It is not linked to you and is used only to limit how fast one device can send requests.</li>
+</ul>
+<p>The request goes to a small relay service we run on Cloudflare. It adds our instructions (answer from the Quran and authentic Sunnah, give references, do not invent sources) and forwards your question to the <strong>Google Gemini API</strong>, then returns the answer to your phone. The relay does not store or log your questions or answers. For abuse prevention it applies rate limits using the random identifier above and your IP address, which Cloudflare processes transiently.</p>
+<p>Google processes the text under the Gemini API terms. On the free tier, Google may use submitted content to improve its products, and it may be reviewed by humans. <strong>Please do not enter sensitive personal information</strong> (such as ID numbers, financial details, health details, or names of other people) into the Assistant.</p>
+<p>The app does not save your chat history to storage; it is kept only while the app is running. When you are offline, or the AI service is busy or rate limited, the Assistant answers from its built-in offline answers and nothing is sent.</p>
+<p><strong>AI can make mistakes.</strong> Answers are general guidance based on the Quran and Sunnah, not a fatwa. For important or personal rulings, please ask a qualified scholar.</p>
+
+<h2>4. Permissions</h2>
+<ul>
+<li><strong>Internet:</strong> only for the AI Islamic Assistant.</li>
+<li><strong>Location (approximate/precise):</strong> optional, for prayer times and Qibla direction.</li>
+<li><strong>Notifications:</strong> for prayer reminders.</li>
+<li><strong>Alarms / exact alarms:</strong> to deliver prayer reminders at the calculated times.</li>
+<li><strong>Receive boot completed:</strong> to restore your reminders after the device restarts.</li>
+<li><strong>Vibrate:</strong> for reminders and Tasbih feedback.</li>
+</ul>
+<p>Prayer reminders and the home-screen widget are scheduled locally by Android; no reminder data leaves your device.</p>
+
+<h2>5. Sharing</h2>
+<p>We do not sell your data. The only third parties involved are Google (the Gemini API, when you use the AI Assistant online) and Cloudflare (hosting of the relay service). A location service may be contacted by Android's Geocoder as described in section 2.</p>
+
+<h2>6. Security</h2>
+<p>Requests to the AI service use HTTPS. The app contains no API keys; the AI key is held only on the relay service. Data on your device is protected by Android's app sandbox and your device lock.</p>
+
+<h2>7. Children</h2>
+<p>The app has no user accounts, no chat with other people, and no purchases, and we do not knowingly collect personal information from children. The AI Assistant sends typed questions to an AI service, so we recommend that parents supervise its use by young children.</p>
+
+<h2>8. Changes</h2>
+<p>If this policy changes, the updated version will be posted at this same address with a new effective date.</p>
+
+<h2>9. Contact</h2>
 <p>Email: abirha3896@gmail.com</p>
 </body>
 </html>
