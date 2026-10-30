@@ -4,21 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NoorUp: Islamic Lifestyle — Privacy Policy</title>
-<style>body{font-family:sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.7;color:#222}h1{font-size:24px}h2{font-size:18px;margin-top:28px}.muted{color:#666}</style>
+<meta name="description" content="How NoorUp: Islamic Lifestyle handles your data. It is offline-first; only the optional AI Islamic Assistant sends data off your device.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0f1014">
+<link rel="canonical" href="https://infinityabir.github.io/abir-hasan-portfolio/noorup-privacy-policy.html">
+<link rel="stylesheet" href="legal/legal.css">
 </head>
-<body>
-<h1>NoorUp: Islamic Lifestyle — Privacy Policy</h1>
-<p class="muted">Effective date: October 28, 2026</p>
-<p>NoorUp ("we", "our", "the app") is an <strong>offline-first</strong> Islamic lifestyle app. Prayer times, the Quran, Duas, Hadith, Qibla, Tasbih and the Zakat calculator work on your device. The only feature that sends data off your device is the <strong>AI Islamic Assistant</strong>, described in section 3. This policy explains what the app stores, what leaves your device, and who receives it.</p>
-
-<h2>1. What we collect</h2>
+<body class="app-noorup">
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">A</span>Abir Hasan</a>
+    <nav aria-label="Site"><a href="./">Portfolio</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <section class="hero" aria-labelledby="page-title">
+    <div class="app-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
+    <p class="eyebrow">Privacy Policy</p>
+    <h1 id="page-title">NoorUp: Islamic Lifestyle</h1>
+    <ul class="meta">
+      <li>Effective date: October 28, 2026</li>
+      <li>Android app</li>
+      <li>Developer: Abir Hasan</li>
+    </ul>
+    <p class="lead">NoorUp ("we", "our", "the app") is an <strong>offline-first</strong> Islamic lifestyle app. Prayer times, the Quran, Duas, Hadith, Qibla, Tasbih and the Zakat calculator work on your device. The only feature that sends data off your device is the <strong>AI Islamic Assistant</strong>, described in section 3. This policy explains what the app stores, what leaves your device, and who receives it.</p>
+    <ul class="chips">
+      <li>No account or sign-in</li>
+      <li>No ads or analytics</li>
+      <li>Works offline</li>
+      <li>AI only when you ask</li>
+    </ul>
+  </section>
+  <div class="layout">
+    <details class="toc" open>
+      <summary>On this page</summary>
+      <nav aria-label="On this page"><ol>
+        <li><a href="#s1">What we collect</a></li>
+        <li><a href="#s2">Data stored on your device</a></li>
+        <li><a href="#s3">AI Islamic Assistant (the only data that leaves your device)</a></li>
+        <li><a href="#s4">Permissions</a></li>
+        <li><a href="#s5">Sharing</a></li>
+        <li><a href="#s6">Security</a></li>
+        <li><a href="#s7">Children</a></li>
+        <li><a href="#s8">Changes</a></li>
+        <li><a href="#s9">Contact</a></li>
+      </ol></nav>
+    </details>
+    <main class="doc" id="content">
+      <section id="s1">
+        <h2><span class="num">1</span>What we collect</h2>
 <p>We (the developer) do not collect your personal data. There is no sign-in or account, no advertising, no analytics, no Firebase, and no developer-run database. We cannot see your prayer records, settings or location.</p>
-
-<h2>2. Data stored on your device</h2>
+      </section>
+      <section id="s2">
+        <h2><span class="num">2</span>Data stored on your device</h2>
 <p>Your settings, language, prayer completion and Qada records, Tasbih counts, bookmarks and your selected location are stored only on your device, in the app's private storage. The app does not use Android cloud backup for this data. Uninstalling the app removes it.</p>
 <p><strong>Location (optional):</strong> if you allow location access for accurate prayer times, your coordinates are stored on your device and used for local prayer-time calculation. They are not sent to us. To show a city name the app may use Android's built-in Geocoder, which, depending on your device, can contact a location service provided by your device maker or Google to turn coordinates into a place name. You can choose a city manually instead.</p>
-
-<h2>3. AI Islamic Assistant (the only data that leaves your device)</h2>
+      </section>
+      <section id="s3">
+        <h2><span class="num">3</span>AI Islamic Assistant (the only data that leaves your device)</h2>
 <p>When you are online and ask a question in the Assistant tab, the app sends the following over HTTPS so an answer can be written:</p>
 <ul>
 <li>the question you typed;</li>
@@ -28,34 +72,53 @@
 <li>a random identifier generated on your device when you first use the app. It is not linked to you and is used only to limit how fast one device can send requests.</li>
 </ul>
 <p>The request goes to a small relay service we run on Cloudflare. It adds our instructions (answer from the Quran and authentic Sunnah, give references, do not invent sources) and forwards your question to the <strong>Google Gemini API</strong>, then returns the answer to your phone. The relay does not store or log your questions or answers. For abuse prevention it applies rate limits using the random identifier above and your IP address, which Cloudflare processes transiently.</p>
-<p>Google processes the text under the Gemini API terms. On the free tier, Google may use submitted content to improve its products, and it may be reviewed by humans. <strong>Please do not enter sensitive personal information</strong> (such as ID numbers, financial details, health details, or names of other people) into the Assistant.</p>
+<div class="callout warn"><div><p>Google processes the text under the Gemini API terms. On the free tier, Google may use submitted content to improve its products, and it may be reviewed by humans. <strong>Please do not enter sensitive personal information</strong> (such as ID numbers, financial details, health details, or names of other people) into the Assistant.</p></div></div>
 <p>The app does not save your chat history to storage; it is kept only while the app is running. When you are offline, or the AI service is busy or rate limited, the Assistant answers from its built-in offline answers and nothing is sent.</p>
-<p><strong>AI can make mistakes.</strong> Answers are general guidance based on the Quran and Sunnah, not a fatwa. For important or personal rulings, please ask a qualified scholar.</p>
-
-<h2>4. Permissions</h2>
-<ul>
-<li><strong>Internet:</strong> only for the AI Islamic Assistant.</li>
-<li><strong>Location (approximate/precise):</strong> optional, for prayer times and Qibla direction.</li>
-<li><strong>Notifications:</strong> for prayer reminders.</li>
-<li><strong>Alarms / exact alarms:</strong> to deliver prayer reminders at the calculated times.</li>
-<li><strong>Receive boot completed:</strong> to restore your reminders after the device restarts.</li>
-<li><strong>Vibrate:</strong> for reminders and Tasbih feedback.</li>
-</ul>
-<p>Prayer reminders and the home-screen widget are scheduled locally by Android; no reminder data leaves your device.</p>
-
-<h2>5. Sharing</h2>
+<div class="callout warn"><div><p><strong>AI can make mistakes.</strong> Answers are general guidance based on the Quran and Sunnah, not a fatwa. For important or personal rulings, please ask a qualified scholar.</p></div></div>
+      </section>
+      <section id="s4">
+        <h2><span class="num">4</span>Permissions</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">Permission</th><th scope="col">Why the app needs it</th></tr></thead><tbody><tr><td>Internet</td><td>Only for the AI Islamic Assistant.</td></tr><tr><td>Location (approximate/precise)</td><td>Optional, for prayer times and Qibla direction.</td></tr><tr><td>Notifications</td><td>For prayer reminders.</td></tr><tr><td>Alarms / exact alarms</td><td>To deliver prayer reminders at the calculated times.</td></tr><tr><td>Receive boot completed</td><td>To restore your reminders after the device restarts.</td></tr><tr><td>Vibrate</td><td>For reminders and Tasbih feedback.</td></tr></tbody></table></div>
+<div class="callout"><div><p>Prayer reminders and the home-screen widget are scheduled locally by Android; no reminder data leaves your device.</p></div></div>
+      </section>
+      <section id="s5">
+        <h2><span class="num">5</span>Sharing</h2>
 <p>We do not sell your data. The only third parties involved are Google (the Gemini API, when you use the AI Assistant online) and Cloudflare (hosting of the relay service). A location service may be contacted by Android's Geocoder as described in section 2.</p>
-
-<h2>6. Security</h2>
+      </section>
+      <section id="s6">
+        <h2><span class="num">6</span>Security</h2>
 <p>Requests to the AI service use HTTPS. The app contains no API keys; the AI key is held only on the relay service. Data on your device is protected by Android's app sandbox and your device lock.</p>
-
-<h2>7. Children</h2>
+      </section>
+      <section id="s7">
+        <h2><span class="num">7</span>Children</h2>
 <p>The app has no user accounts, no chat with other people, and no purchases, and we do not knowingly collect personal information from children. The AI Assistant sends typed questions to an AI service, so we recommend that parents supervise its use by young children.</p>
-
-<h2>8. Changes</h2>
+      </section>
+      <section id="s8">
+        <h2><span class="num">8</span>Changes</h2>
 <p>If this policy changes, the updated version will be posted at this same address with a new effective date.</p>
-
-<h2>9. Contact</h2>
+      </section>
+      <section id="s9">
+        <h2><span class="num">9</span>Contact</h2>
 <p>Email: abirha3896@gmail.com</p>
+<div class="contact">
+  <p><strong>Questions about this page?</strong>Email abirha3896@gmail.com and include the name of the app.</p>
+  <a class="btn" href="mailto:abirha3896@gmail.com?subject=NoorUp%20privacy%20question">Email abirha3896@gmail.com</a>
+</div>
+      </section>
+    </main>
+  </div>
+</div>
+<footer class="site">
+  <div class="wrap">
+    <p>&copy; 2026 Abir Hasan</p>
+    <ul>
+      <li><a href="jobtracker-privacy-policy.html">Job Tracker privacy policy</a></li>
+      <li><a href="bloodnetwork-privacy-policy.html">Blood Network BD privacy policy</a></li>
+      <li><a href="bloodnetwork-delete-account.html">Blood Network BD account deletion</a></li>
+      <li><a href="./">Back to portfolio</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="legal/legal.js" defer></script>
 </body>
 </html>
